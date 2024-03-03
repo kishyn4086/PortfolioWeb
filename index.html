@@ -568,7 +568,14 @@ $('.menu p').eq(0).on('mouseenter', function() {
 $('.menu p').eq(0).on('mouseleave', function() {
     $('.menu p').eq(0).css('height', '2vh');
 });
-        
+
+ $('.menu p.dynamic-height').on('touchstart', function() {
+    updateTextHeight($(this));
+});
+
+$('.menu p.dynamic-height').on('touchend', function() {
+    $(this).css('height', '2vh');
+});           
 
 
 
